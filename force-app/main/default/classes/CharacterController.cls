@@ -4,7 +4,9 @@ public with sharing class CharacterController {
         public String characterName;
     }
 
-    public static Map<String, Integer> setCharacterIds(Map<String, Integer> characterMap) {
+    public static Map<String, Integer> setCharacterIds(
+        Map<String, Integer> characterMap
+    ) {
         characterMap = new Map<String, Integer>();
         characterMap.put('Lukeee Skywalker', 1);
         characterMap.put('C-3PO', 2);
