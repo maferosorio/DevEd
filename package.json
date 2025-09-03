@@ -13,7 +13,9 @@
         "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "prepare": "husky install",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged",
+        "format:apex": "prettier --write \"force-app/**/*.cls\"",
+        "lint:apex": "npx pmd-bin -d force-app/main/default/classes -R pmd-ruleset.xml -f text"
     },
     "devDependencies": {
         "@eslint/js": "^9.34.0",
@@ -30,12 +32,14 @@
         "husky": "^9.1.7",
         "lint-staged": "^16.1.6",
         "prettier": "^3.5.3",
-        "prettier-plugin-apex": "^2.2.6"
+        "prettier-plugin-apex": "^2.2.6",
+        "pmd-bin": "^2.15.0"
     },
     "lint-staged": {
         "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
             "prettier --write",
-            "eslint --quiet --fix"
+            "eslint --quiet --fix",
+            "npx pmd-bin -d force-app/main/default/classes -R pmd-ruleset.xml -f text"
         ],
         "**/{aura,lwc}/**/*.js": [
             "eslint"

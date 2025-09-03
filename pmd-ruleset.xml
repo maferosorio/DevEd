@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ruleset name="Apex rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0
+                             http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+  <description>Reglas básicas para Apex</description>
+
+  <!-- Errores comunes -->
+  <rule ref="category/apex/errorprone.xml"/>
+  <!-- Buenas prácticas -->
+  <rule ref="category/apex/bestpractices.xml"/>
+  <!-- Evitar código duplicado -->
+  <rule ref="category/apex/codestyle.xml"/>
+</ruleset>
