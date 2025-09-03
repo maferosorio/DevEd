@@ -1,3 +1,4 @@
 {
-    "**/*.{js,cls,cmp,css,html}": ["eslint --fix"]
+    "*.js": ["eslint"],
+    "**/*.{js,json,md,html,css,apex,xml}": ["prettier --write"]
 }
